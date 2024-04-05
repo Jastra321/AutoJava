@@ -1,6 +1,6 @@
 import java.math.BigDecimal;
 import java.util.GregorianCalendar;
-import org.junit.*;
+import org.junit.jupiter.api.Test;
 import org.autojava.*;
 
   public class TestDrive {
