@@ -1,13 +1,13 @@
-import org.autojava.*;
-import org.testng.annotations.Test;
-
 import java.math.BigDecimal;
 import java.util.GregorianCalendar;
+import org.junit.*;
+import org.autojava.*;
 
   public class TestDrive {
 
     @Test
     void Test1Run() {
+        System.out.println("Run test!");
         Ticket tt = new Ticket();
         tt.setNum(1);
         tt.setName("Mark");
