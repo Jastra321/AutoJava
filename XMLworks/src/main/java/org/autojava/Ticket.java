@@ -7,6 +7,8 @@ import jakarta.xml.bind.Marshaller;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
+
+import java.io.StringWriter;
 import java.math.BigDecimal;
 import java.util.GregorianCalendar;
 
@@ -53,17 +55,22 @@ public class Ticket implements JAXBmarshal{
         this.cost = cost;
     }
 
-    public static void doJAXBmarshal(Object o){
+    public static String doJAXBmarshal(Object o){
+        StringWriter sw = new StringWriter();
+        String s = "";
         try {
             JAXBContext contextObj = JAXBContext.newInstance(Ticket.class);
             Marshaller marshallerObj = contextObj.createMarshaller();
             marshallerObj.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marshallerObj.marshal(o, System.out);
+            marshallerObj.marshal(o, sw);
         } catch ( MarshalException e) {
             System.out.println("Error marshalException" + e);
         } catch ( JAXBException jb) {
             jb.printStackTrace();
         }
+        s = sw.toString();
+        return s;
     }
 
 }
