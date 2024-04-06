@@ -57,7 +57,6 @@ public class Ticket implements JAXBmarshal{
 
     public static String doJAXBmarshal(Object o){
         StringWriter sw = new StringWriter();
-        String s = "";
         try {
             JAXBContext contextObj = JAXBContext.newInstance(Ticket.class);
             Marshaller marshallerObj = contextObj.createMarshaller();
@@ -69,8 +68,7 @@ public class Ticket implements JAXBmarshal{
         } catch ( JAXBException jb) {
             jb.printStackTrace();
         }
-        s = sw.toString();
+        String s = sw.toString();
         return s;
     }
-
 }
