@@ -9,8 +9,5 @@ public class Main {
 
         DZ2 d2 = new DZ2();
         d2.doDZ2();
-
-
-
     }
 }
