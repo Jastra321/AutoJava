@@ -55,38 +55,6 @@ public class DZ1 {
 
     /*
 
-
-
-.......................................
-Домашнее задание 5:
-1. Добавить в pom.xml
-  <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-lang3</artifactId>
-      <version>3.12.0</version>
-    </dependency>
-
-Если библиотека правильно добавлена то в своем классе вы можете написать StringUtils и вызвать какой-нибудь метод из этого класса, импорт для этого класса будет import org.apache.commons.lang3.StringUtils;
-2. Добавить в pom.xml
-  <dependency>
-      <groupId>commons-io</groupId>
-      <artifactId>commons-io</artifactId>
-      <version>2.15.1</version>
-  </dependency>
-
-Если библиотека правильно добавлена то в своем классе вы можете написать FileUtils и вызвать какой-нибудь метод из этого класса, импорт для этого класса будет import org.apache.commons.io.FileUtils;
-Писать какую-то логику с StringUtils и FileUtils не надо. Просто убедитесь что библиотеки подключены
-3.
--Создайте класс Transport, Car, Bus
--Car и Bus должны наследовать класс Transport;
--создайте в классе Transport поля model, height, weight, maxSpeed
--создайте один метод в классе Transport
--создайте конструкторы в классе Transport: 1 - без параметров, 2 - все параметры, 3 - только с одним параметром
--сделайте одно поле private, одно - default(для default не надо писать модификатор доступа), одно - protected, еще одно public
--создайте гетер и сетер для private переменной
--создайте еще один класс с методом main
--создайте обьекты для Car  и Bus в main методе и вызовите для них метод из класса Transport
-
 .......................................
 ДЗ 6
 1. Используйте полиморфизм, можете просто напечатать код из занятия или из видео из ютуба

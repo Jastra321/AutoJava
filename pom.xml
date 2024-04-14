@@ -13,6 +13,7 @@
         <module>DZ_1_2</module>
         <module>DZ_3</module>
         <module>DZ_4</module>
+        <module>DZ_5</module>
     </modules>
 
     <properties>
