@@ -40,6 +40,6 @@ public class Transport {
     }
 
     public String getInfo(){
-        return (this.getModel() + this.getHeight() + this.getWeight() + this.getMaxSpeed());
+        return (this.getModel() + " " + this.getHeight() + " " + this.getWeight() + " " + this.getMaxSpeed());
     }
 }
