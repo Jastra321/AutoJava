@@ -75,7 +75,7 @@ public class FileReporter {
 
     private void makeFile(){
         try {
-            File myObj = new File("filename.txt");
+            File myObj = new File("DZ_9/src/main/resources/filename.txt");
             myObj.createNewFile();
         } catch (IOException e) {
             System.out.println("An error occurred.");
@@ -86,7 +86,7 @@ public class FileReporter {
     public void writeFile() {
         makeFile();
         try {
-            FileWriter myWriter = new FileWriter("filename.txt");
+            FileWriter myWriter = new FileWriter("DZ_9/src/main/resources/filename.txt");
             for (Map.Entry<String, Integer> q: Dictionry.entrySet()) {
                 String s = "Key: " + q.getKey() +"  Value: " + q.getValue().toString() +"\n";
                 myWriter.write(s);
