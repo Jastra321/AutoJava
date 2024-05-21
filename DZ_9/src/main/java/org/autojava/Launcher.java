@@ -1,7 +1,6 @@
 package org.autojava;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -16,7 +15,7 @@ public class Launcher {
         System.out.println("схема параболы в машстабле 1 к 50 по оси Y.");
         System.out.println("---------------------->  X=-100  Ось Y");
         for (int i = -100; i <= 100; i= i +10){
-            Integer a = calc.calcParabola(i)/50;
+            int a = calc.calcParabola(i)/50;
             for(int q = 0; q < a; q++) {
                 System.out.print(" ");
             }
@@ -32,7 +31,7 @@ public class Launcher {
         List<String> arrNumeric = new ArrayList<>();
         for ( String q: arrStr) {
            String str = q.replaceAll("[^\\d.]", "").trim();
-           if (str.length() > 0 )  {
+           if (!str.isEmpty() )  {
                arrNumeric.add(str);
            }
         }
