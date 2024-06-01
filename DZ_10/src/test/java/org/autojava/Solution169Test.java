@@ -15,6 +15,7 @@ class Solution169Test {
     int[] v3 = new int[]{2,2,1,1,1};
     int[] v4 = new int[]{1};
     int[] v5 = new int[]{6,5,5};
+    int[] v6 = new int[]{3, 3,4};
 
 
     Solution169 s = new Solution169();
@@ -49,4 +50,8 @@ class Solution169Test {
         assertEquals( 5, s.majorityElement(v5) );
     }
 
+    @Test
+    public void majorityElementTest6() {
+        assertEquals( 3, s.majorityElement(v6) );
+    }
 }
