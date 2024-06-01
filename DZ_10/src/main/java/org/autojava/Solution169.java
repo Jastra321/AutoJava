@@ -19,25 +19,16 @@ public  class Solution169 {
                 }
             }
             map.put(q,count);
-
-        }
-
-        maxCount = Collections.max(map.values());
-        for (Map.Entry<Integer, Integer> q: map.entrySet()) {
-            if (q.getValue() == maxCount) {
-                number = q.getKey();
-                break;
+            if (maxCount < count){
+                maxCount = count;
+                number = q;
             }
-        }
 
-        int reternA = -1;
+        }
+        int reternA = nums[0];
 
-        if ((maxCount > nums.length / 2) && (maxCount != -1)) {
-           reternA = number;
-        }
-         else {
-             reternA = nums[0];
-        }
-         return reternA;
+        if ((maxCount > nums.length / 2) && (maxCount != -1))  reternA = number;
+        return reternA;
     }
 }
+
