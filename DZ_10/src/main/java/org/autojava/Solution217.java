@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+//решить с помощью hashMap
+//Если есть дубли, вернуть true
+
 public class Solution217 {
     public boolean containsDuplicate(int[] nums) {
         HashMap.Entry<Integer, Long> maxEntry = Arrays.stream(nums).boxed()
