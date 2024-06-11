@@ -1,12 +1,9 @@
 package org.autojava;
 
-import org.apache.commons.lang3.ArrayUtils;
-
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static java.util.function.Function.*;
 //вернуть элемент, который повторяется максимальное колчество раз и не менее половины длинны массива раз.
 //если нужого нет, вернуть первый.
 public  class Solution169 {

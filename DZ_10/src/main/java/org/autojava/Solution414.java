@@ -1,8 +1,12 @@
 package org.autojava;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
+/*
+https://leetcode.com/problems/third-maximum-number/description/
+
+Given an integer array nums, return the third distinct maximum number in this array.
+If the third maximum does not exist, return the maximum number.
+*/
+
 
 public class Solution414 {
     public int thirdMax(int[] nums) {
