@@ -18,26 +18,32 @@ public class Solution219 {
             if (set.size() == nums.length) isUnique = true;
         //поиск дубликатов
             if (!isUnique) {
+
                 int i = 0;
                 do {
+                    set.clear();
                     int x = 0;
                     if  ((i + k) < (nums.length - 1)) {
                          x = i + k;
                     } else {
                          x = nums.length - 1;
                     }
-
-
-                    for (int j = (i + 1); j <= x; j++) {
-                        if (nums[j] == nums[i] ) {
-                            isAnswer = true;
-                            break;
-                        }
-                    }
+                    set.add(nums[i]);
+                    isAnswer = isAnswer(nums, i, x, set, isAnswer);
 
                     i++;
                 } while ((i < nums.length) && (!isAnswer));
 
+            }
+        }
+        return isAnswer;
+    }
+
+    private boolean isAnswer(int[] nums, int i, int x, HashSet<Integer> set, boolean isAnswer) {
+        for (int j = (i + 1); j <= x; j++) {
+            if (!set.add(nums[j])) {
+                isAnswer = true;
+                break;
             }
         }
         return isAnswer;
